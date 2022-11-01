@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Nav from "../components/Header";
-import Link from "next/Link";
+import Link from "next/link";
 import Image from "next/image";
-import you from '../public/images/you.gif'
+import you from './you.gif'
+
 import { FiExternalLink } from "react-icons/fi";
 import { createClient } from "next-sanity";
 const blog = ({ faq }) => {

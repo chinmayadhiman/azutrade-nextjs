@@ -2,7 +2,8 @@ import React from 'react'
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { CiLocationArrow1 } from "react-icons/ci";
-import Link from 'next/link';
+import Link from "next/link";
+
 
 const Product = ({ products }) => {
    const client = createClient({
