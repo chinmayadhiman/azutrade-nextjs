@@ -360,7 +360,7 @@ body.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../public/images/hm2.jpg) no-repeat;
+    background: url('../public/images/hm2.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 17rem;
