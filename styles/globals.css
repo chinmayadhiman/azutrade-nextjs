@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.imgslider {
-    width:40%;
-}
-.imgslider img{
-    width:10;
-}

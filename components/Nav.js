@@ -32,7 +32,7 @@ const nav = () => {
     }
         return (
           <>
-            <header className={menuStatus.style}>
+            <header className={`${menuStatus.style} relative z-50`}>
               <div id="menu-btn" className="p-2" onClick={() => handleClick()}>
                 {menuStatus.icon ? (
                   <div className="text-5xl p-2">X</div>
@@ -40,10 +40,11 @@ const nav = () => {
                   <AiOutlineBars className="text-5xl" />
                 )}
               </div>
-
-              <a href="#home" className="logo">
-                Azu
-              </a>
+              
+                <a href="#home" className="logo ">
+                  Azu
+                </a>
+             
 
               <nav className="navbar active">
                 <a href="#home" className="active">
@@ -60,35 +61,27 @@ const nav = () => {
                 <a
                   href="https://www.facebook.com/Azu-Trade-India-104637829018241"
                   className="fab fa-facebook-f"
-                >
-                  <AiOutlineFacebook />
-                </a>
+                ></a>
                 <a
                   href="https://www.instagram.com/azu_india/"
                   className="fab fa-instagram"
-                >
-                  <AiOutlineInstagram />
-                </a>
+                ></a>
 
                 <a
                   href="https://www.linkedin.com/in/azu-trade-0b6180248/"
                   className="fab fa-linkedin"
-                >
-                  <AiFillLinkedin />
-                </a>
+                ></a>
                 <a
                   href="https://www.youtube.com/channel/UCzbUiekVZ0JBnD83tEYYN1g"
                   className="fa-brands fa-youtube"
-                >
-                  <AiFillYoutube />
-                </a>
+                ></a>
               </div>
             </header>
 
             <section className="info">
-              <div className="box">
+              <div className="box text-white">
                 <a href="#">
-                  <i className="fas fa-envelope"></i>explore@azutrade.com
+                  <i className="fas fa-envelope "></i>explore@azutrade.com
                 </a>
                 <a href="#">
                   <i className="fas fa-phone"></i>+91-9405823171
@@ -97,29 +90,21 @@ const nav = () => {
               <div className="share flex justify-center ">
                 <a
                   href="https://www.facebook.com/Azu-Trade-India-104637829018241"
-                  className="fab fa-facebook-f text-center  align-center"
-                >
-                  <AiOutlineFacebook className="text-center text-white text-5xl my-2 mx-2 hover:text-orange-400" />
-                </a>
+                  className="fab fa-facebook-f "
+                ></a>
                 <a
                   href="https://www.instagram.com/azu_india/"
-                  className="text-center text-white text-5xl my-1 mx-1"
-                >
-                  <AiOutlineInstagram className="text-center text-white text-5xl my-2 mx-2 hover:text-orange-400" />
-                </a>
+                  className="fab fa-instagram"
+                ></a>
 
                 <a
                   href="https://www.linkedin.com/in/azu-trade-0b6180248/"
-                  className="text-center text-white text-5xl my-1 mx-1"
-                >
-                  <AiFillLinkedin className="text-center text-white text-5xl my-2 mx-2 hover:text-orange-400" />
-                </a>
+                  className="fab fa-linkedin"
+                ></a>
                 <a
                   href="https://www.youtube.com/channel/UCzbUiekVZ0JBnD83tEYYN1g"
-                  className="text-center text-white text-5xl my-1 mx-1"
-                >
-                  <AiFillYoutube className="text-center text-white text-5xl my-2 mx-2 hover:text-orange-400" />
-                </a>
+                  className="fa-brands fa-youtube"
+                ></a>
               </div>
             </section>
             <section className="name">

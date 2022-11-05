@@ -3,7 +3,8 @@ import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { CiLocationArrow1 } from "react-icons/ci";
 import Link from "next/link";
-
+import Image from "next/image";
+import ask from "../public/images/ask.gif";
 
 const Product = ({ products }) => {
    const client = createClient({
@@ -28,7 +29,7 @@ const Product = ({ products }) => {
                   src={`${builder.image(item.productimage).width(200).url()}`}
                   height="100"
                   alt=""
-                  className='mx-auto'
+                  className="mx-auto"
                 />
                 <h3>{item.title}</h3>
                 <h3>Rs {item.price}/-</h3>
@@ -37,13 +38,17 @@ const Product = ({ products }) => {
           })}
         </div>
       </section>
-      <div className="my-5  w-fit text-center p-10  hover:bg-orange-500 hover:cursor-pointer rounded-xl flex mx-auto gap-5 text-2xl font-semibold">
-        <Link href={"/blogs"}>
-          <button className="flex text-center justify-center text-4xl my-auto  hover:bg-orange-500">
-            You Ask{" "}
-            <span className="text-white faq flex gap-10 p-10 text-center">
-              we answer <CiLocationArrow1 className="text-6xl font-bold" />
-            </span>
+      <div className="ask-container">
+        <Image
+          src={ask}
+          alt="Picture of the author"
+          className="h-full w-full"
+        />
+      </div>
+      <div className="faq my-5  w-fit text-center p-10  hover:bg-orange-500 hover:cursor-pointer rounded-xl flex mx-auto gap-5 text-2xl font-semibold">
+        <Link target="_blank" href={"/blogs"}>
+          <button className="flex text-center justify-center text-4xl my-auto  hover:bg-orange-500 p-10">
+            You Ask We answer
           </button>
         </Link>
       </div>

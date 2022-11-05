@@ -21,14 +21,7 @@ export default function Home({blogs,about}) {
       
   return (
     <>
-      <Head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AzuTrade</title>
-        <meta name="description" content="Azutrade" />
-        <link rel="icon" type="image" href="../public/images/anar.png" />
-      </Head>
-
+    
       <Nav />
       <Intro />
       <Product products={blogs} />

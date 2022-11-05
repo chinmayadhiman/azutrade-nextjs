@@ -30,8 +30,10 @@ const blog = ({ faq }) => {
               {faq.map((item) => {
                 return (
                   <div className="w-fit faqbox text-center flex gap-10 text-4xl pl-5 mx-2 mt-12 bg-orange-200 p-5 px-10 hover:text-white hover:bg-orange-500 rounded-lg">
-                    <Link href={item.link}>{item.title}</Link>
-                    <Link href={item.link}>
+                    <Link target="_blank" href={item.link}>
+                      {item.title}
+                    </Link>
+                    <Link target="_blank" href={item.link}>
                       <FiExternalLink />
                     </Link>
                   </div>

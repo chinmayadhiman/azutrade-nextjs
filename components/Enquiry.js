@@ -1,6 +1,23 @@
-import React from "react";
+import React,{useState} from "react";
 
 const Enquiry = () => {
+    const [form, setForm] = useState({
+      name: "",
+      email: "",
+      number: "",
+      nation: "",
+    });
+
+    const submitForm = (e) => {
+      e.preventDefault();
+    };
+
+    const handleChange = (e) => {
+      setForm({
+        ...form,
+        [e.target.name]: e.target.value,
+      });
+    };
   return (
     <>
       <section className="contact" id="contact">

@@ -1,9 +1,18 @@
+import Head from 'next/head';
 import React from 'react'
-
+import bg from '../public/images/hm2.jpg'
 const Intro = () => {
+  // console.log(banner)
   return (
     <>
-      <section className="home" id="home">
+     
+      <section
+        className="home"
+        id="home"
+        style={{
+          backgroundImage: `url(${bg.src})`,
+        }}
+      >
         <div className="content">
           <h3>
             <span> NAMASTE </span>
