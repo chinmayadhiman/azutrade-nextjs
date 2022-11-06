@@ -38,20 +38,15 @@ const Product = ({ products }) => {
           })}
         </div>
       </section>
-      <div className="ask-container">
-        <Image
-          src={ask}
-          alt="Picture of the author"
-          className="h-full w-full"
-        />
-      </div>
-      <div className="faq my-5  w-fit text-center p-10  hover:bg-orange-500 hover:cursor-pointer rounded-xl flex mx-auto gap-5 text-2xl font-semibold">
-        <Link target="_blank" href={"/blogs"}>
-          <button className="flex text-center justify-center text-4xl my-auto  hover:bg-orange-500 p-10">
-            You Ask We answer
-          </button>
-        </Link>
-      </div>
+     
+          
+        <div className="faq my-5  w-fit text-center p-20  hover:bg-cyan-500 hover:cursor-pointer rounded-xl flex mx-auto gap-5 text-2xl font-semibold">
+          <Link target="_blank" href={"/blogs"}>
+            <button className="flex text-center justify-center text-2xl lg:text-4xl my-auto  hover:bg-cyan-500 p-10 lg:p-20">
+             <span className="text-black pr-5">Have Question ? </span>  You Ask We answer
+            </button>
+          </Link>
+        </div>
     </>
   );
 }
