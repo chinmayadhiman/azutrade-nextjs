@@ -20,7 +20,11 @@ const Enquiry = () => {
     };
   return (
     <>
-      <section className="contact" id="contact">
+      <section
+        className="contact"
+        id="contact"
+        action="sonaly647@gmail.com"
+      >
         <h1 className="heading">
           enquiry <span>form</span>
         </h1>
