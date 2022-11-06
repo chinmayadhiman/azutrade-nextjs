@@ -6,7 +6,7 @@ const Team = () => {
   const settings = {
     infinite: true,
     dots: false,
-    slidesToShow: 4,
+    slidesToShow: 4.3,
     slidesToScroll: 1,
     lazyLoad: true,
     autoplay: true,
@@ -37,7 +37,7 @@ const Team = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1.7,
           slidesToScroll: 1,
           arrows: false,
         },
