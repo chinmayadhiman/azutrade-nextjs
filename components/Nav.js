@@ -32,7 +32,7 @@ const nav = () => {
     }
         return (
           <>
-            <header className={`${menuStatus.style} relative z-50`}>
+            <header className={`${menuStatus.style}`}>
               <div id="menu-btn" className="p-2" onClick={() => handleClick()}>
                 {menuStatus.icon ? (
                   <div className="text-5xl p-2">X</div>
