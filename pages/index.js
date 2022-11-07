@@ -8,23 +8,15 @@ import Product from "../components/Product";
 import Enquiry from "../components/Enquiry";
 
 import { createClient } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-export default function Home({blogs,about}) {
-    const client = createClient({
-      projectId: "iytovi01",
-      dataset: "production",
-      useCdn: false,
-    });
-    // console.log(blogs);
-    const builder = imageUrlBuilder(client);
-      
-      
+
+export default function Home({product,about}) {
+
   return (
     <>
     
       <Nav />
       <Intro />
-      <Product products={blogs} />
+      <Product products={product} />
       <Team />
       <Enquiry />
       <About about={about} />
@@ -41,13 +33,12 @@ export async function getServerSideProps(context) {
   });
   const query = `*[_type == "product"]`;
   const aboutq = await client.fetch(`*[_type == "aboutus"]`);
-  const faq = await client.fetch(`*[_type == "faq"]`);
-  const blogs = await client.fetch(query);
+  const product = await client.fetch(query);
   const about = aboutq[0].aboutus[0].children[0].text
   
   return {
     props: {
-      blogs,about
+      product,about
     },
   };
 }

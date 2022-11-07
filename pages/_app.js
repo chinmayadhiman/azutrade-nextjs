@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/azu.css";
 import favicon from '../public/images/anar.png'
 import Head from "next/head";
-
+import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -24,9 +24,51 @@ function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
-      </Head>
-      <Component {...pageProps} />
       
+        <title>AzuTrade</title>
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://www.coderblogs.site" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AzuTrade" />
+        <meta
+          property="og:description"
+          content="We're small and we care and we're here to help you import the hell out of India. India have lot to provide along with Trust, quality and Tandoori Naan."
+        />
+        <meta property="og:image" content={`${favicon.src}`} />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="azutrade.com" />
+        <meta property="twitter:url" content="https://www.azutrade.com" />
+        <meta name="twitter:title" content="AzuTrade" />
+        <meta
+          name="twitter:description"
+          content=" We're small and we care and we're here to help you import the hell out of India. India have lot to provide along with Trust, quality and Tandoori Naan."
+        />
+        <meta name="twitter:image" content={`${favicon.src}`} />
+      </Head>
+      <NextSeo
+        title="AzuTrade"
+        titleTemplate="AzuTrade"
+        defaultTitle="AzuTrade"
+        description="We're small and we care and we're here to help you import the hell out of India. India have lot to provide along with Trust, quality and Tandoori Naan"
+        canonical="https://www.azutrade.com/"
+        openGraph={{
+          url: "https://www.azutrade.com/",
+          title: "AzuTrade",
+          description:
+            " We're small and we care and we're here to help you import the hell out of India. India have lot to provide along with Trust, quality and Tandoori Naan",
+          images: [
+            {
+              url: "../public/images/anar.png",
+              width: 800,
+              height: 420,
+              alt: "logo",
+            },
+          ],
+        }}
+      />
+      <Component {...pageProps} />
     </>
   );
 }

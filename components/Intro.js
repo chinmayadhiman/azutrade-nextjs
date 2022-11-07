@@ -1,8 +1,7 @@
-import Head from 'next/head';
 import React from 'react'
 import bg from '../public/images/hm2.jpg'
 const Intro = () => {
-  // console.log(banner)
+  
   return (
     <>
      

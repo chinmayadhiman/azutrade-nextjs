@@ -1,11 +1,8 @@
 import React,{useState} from 'react'
 import {
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-  AiFillLinkedin,
-  AiFillYoutube,
   AiOutlineBars,
 } from "react-icons/ai";
+
 const nav = () => {
 
     const [menuStatus, setmenuStatus] = useState({

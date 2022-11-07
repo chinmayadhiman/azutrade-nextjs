@@ -1,10 +1,8 @@
 import React from 'react'
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { CiLocationArrow1 } from "react-icons/ci";
 import Link from "next/link";
-import Image from "next/image";
-import ask from "../public/images/ask.gif";
+
 
 const Product = ({ products }) => {
    const client = createClient({
@@ -23,8 +21,9 @@ const Product = ({ products }) => {
 
         <div className="box-container">
           {products.map((item) => {
+            
             return (
-              <div className="box">
+              <div className="box" key={item._id}>
                 <img
                   src={`${builder.image(item.productimage).width(200).url()}`}
                   height="100"
