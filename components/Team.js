@@ -2,7 +2,18 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Team = () => {
+import { createClient } from "next-sanity";
+import imageUrlBuilder from "@sanity/image-url";
+const Team = ({certificates}) => {
+  
+   const client = createClient({
+     projectId: "kbnh7il4",
+     dataset: "production",
+     useCdn: false,
+   });
+  
+  const builder = imageUrlBuilder(client);
+
   const settings = {
     infinite: true,
     dots: false,
@@ -45,27 +56,31 @@ const Team = () => {
     ],
   };
   return (
-    <section className="w-full bg-slate-50 p-0 mt-10" id="">
-      <h1 className="heading">
-        membership & <span>certification</span>
-      </h1>
+    <>
+      <section className="w-full bg-slate-50 p-0 mt-10" id="">
+        <h1 className="heading">
+          membership & <span>certification</span>
+        </h1>
 
-      <div className="mb-6 bg-slate-50 p-8">
-        <Slider {...settings} className="">
-          <img src="images/team.png" alt="" className=" h-96 " />
-          <img src="images/team1.png" alt="" className=" h-96 " />
-          <img src="images/team2.jpg" alt="" className=" h-96 " />
-          <img src="images/team3.jpg" alt="" className=" h-96 " />
-          <img src="images/team4.jpg" alt="" className=" h-96 " />
-          <img src="images/team5.png" alt="" className=" h-96" />
-          <img src="images/team6.png" alt="" className= "h-96 " />
-          <img src="images/team7.png" alt="" className=" h-96"/>
-          <img src="images/team8.png" alt="" className=" h-96" />
-          <img src="images/team9.png" alt="" className=" h-96" />
-        </Slider>
-      </div>
-    </section>
+        <div className=" w-full mb-6 bg-slate-50 p-8 flex flex-col">
+          <Slider {...settings} className="">
+            {certificates.map((item) => {
+              return (
+                <img
+                  key={item._id}
+                  src={`${builder.image(item.certificate).width(500).url()}`}
+                  alt=""
+                  className=" h-96 flex"
+                />
+              );
+            })}
+          </Slider>
+        </div>
+      </section>
+    </>
   );
 }
+
+
 
 export default Team
