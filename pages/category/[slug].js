@@ -1,11 +1,18 @@
 import groq from "groq";
-import client from "../client";
+
+import { createClient } from "next-sanity";
 import Header from "../../components/Header";
 <Header/>;
 
+
+const client = createClient({
+  projectId: "kbnh7il4",
+  dataset: "production",
+  useCdn: false,
+});
 const Post = ({ post }) => {
 
-    console.log(post)
+    // console.log(post)
     try {
       return (
         <>

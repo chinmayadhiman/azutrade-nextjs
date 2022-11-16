@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from "../components/Header";
 import Link from "next/link";
-import client from "./client";
 
+import { createClient } from "next-sanity";
 const nav = ({ cs}) => {
     // console.log(post);
     return (
@@ -51,6 +51,11 @@ const nav = ({ cs}) => {
     );
 }
 export async function getServerSideProps(context) {
+  const client = createClient({
+    projectId: "kbnh7il4",
+    dataset: "production",
+    useCdn: false,
+  });
   const query = `
      *[_type=="category"]{
   title,
