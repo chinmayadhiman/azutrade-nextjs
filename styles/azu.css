@@ -75,7 +75,7 @@ section {
     color:var(--black);
 }
 
-.heading span{
+.heading span,.clipart{
     position: relative;
     z-index: 10;
     background: var(--orange);
