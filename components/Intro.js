@@ -6,10 +6,9 @@ const Intro = () => {
   
   return (
     <>
-      <Navbar />
       {/* <Contact/> */}
       <section
-        className="home"
+        className="home mt-20"
         id="home"
         style={{
           backgroundImage: `url(${bg.src})`,

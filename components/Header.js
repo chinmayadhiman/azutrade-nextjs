@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Header= () => {
   return (
     <>
-      <section className="info">
+      <section className="info gap-5">
         
         <div className="box text-white">
           <a href="#">

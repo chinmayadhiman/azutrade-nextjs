@@ -66,8 +66,8 @@ const Navbar = () => {
                   onClick={() => setActive(i)}
                 >
                   <span
-                    className={`text-4xl cursor-pointer duration-500 ${
-                      i === active && "-mt-8 text-orange-500"
+                    className={`text-4xl cursor-pointer duration-500 py-2  ${
+                      i === active && "-mt-12 text-orange-500"
                     }`}
                   >
                     <i className={`${menu.icon}`}></i>
