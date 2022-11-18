@@ -1,6 +1,6 @@
 import React from 'react'
 import contactbanner from "../public/images/contactbanner.gif";
-import Image from "next/Image";
+import Image from "next/image";
 import Enquiry from "../components/Enquiry";
 const Contactus = () => {
   return (
