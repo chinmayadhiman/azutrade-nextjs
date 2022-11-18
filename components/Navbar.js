@@ -10,7 +10,7 @@ const Navbar = () => {
       link:"/product"
     },
     {
-      name: "Faq",
+      name: "Q&A",
       icon: "fa-sharp fa-solid fa-question",
       link:"/faq"
     },

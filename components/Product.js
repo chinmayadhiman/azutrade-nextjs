@@ -21,7 +21,6 @@ const Product = ({ products }) => {
 
         <div className="box-container">
           {products.map((item) => {
-            
             return (
               <div className="box" key={item._id}>
                 <img
@@ -37,15 +36,13 @@ const Product = ({ products }) => {
           })}
         </div>
       </section>
-     
-          
-        <div className="faq my-5  w-fit text-center p-20  hover:bg-cyan-500 hover:cursor-pointer rounded-xl flex mx-auto gap-5 text-2xl font-semibold">
-          <Link  href={"/faq"}>
-            <button className="flex text-center justify-center text-2xl lg:text-4xl my-auto  hover:bg-cyan-500 p-10 lg:p-20">
-             <span className="text-black pr-5">Have Question ? </span>  You Ask We answer
-            </button>
-          </Link>
-        </div>
+
+      <div className="flex bg-orange-500 w-fit p-5 rounded-3xl text-white text-2xl font-semibold gap-5 items-center  mx-auto hover:cursor-pointer border-solid border-5 border-orange-500 hover:text-orange-600 hover:bg-white">
+        <span className="text">Have Question? You Ask we Answer</span>
+        <span className="icon">
+          <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+        </span>
+      </div>
     </>
   );
 }
