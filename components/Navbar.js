@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiHome } from "react-icons/hi";
+import Header from './Header'
 import Link from "next/link";
 const Navbar = () => {
   const Menus = [
@@ -25,6 +25,9 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
   return (
     <>
+      <div className="md:hidden">
+        <Header/>
+    </div>
       {/* ------------------------------Desktop Navigation---------------------------------- */}
       <div className="nav p-2 bg-white hidden md:block fixed w-full top-0 z-50">
         <ul className="flex gap-20 justify-center p-2">
@@ -63,8 +66,8 @@ const Navbar = () => {
                   onClick={() => setActive(i)}
                 >
                   <span
-                    className={`text-xl cursor-pointer duration-500 ${
-                      i === active && "-mt-4 text-orange-500"
+                    className={`text-4xl cursor-pointer duration-500 ${
+                      i === active && "-mt-8 text-orange-500"
                     }`}
                   >
                     <i className={`${menu.icon}`}></i>
@@ -72,8 +75,8 @@ const Navbar = () => {
                   <span
                     className={` ${
                       active === i
-                        ? "translate-y-2 duration-200 opacity-100 text-xl font-semibold"
-                        : "opacity-0 translate-y-10"
+                        ? "translate-y-2 duration-200 opacity-100 text-2xl font-semibold items-center text-center"
+                        : "opacity-0 translate-y-32"
                     } `}
                   >
                     {menu.name}

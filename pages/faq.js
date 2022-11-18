@@ -7,7 +7,7 @@ const faq = ({ faqData}) => {
     
     return (
       <>
-        <div className="flex my-28 w-full">
+        <div className="flex md:my-28 w-full">
           <Image src={faqbanner} className="w-full" alt='Frequently Asked Questions'>
             
 </Image>
