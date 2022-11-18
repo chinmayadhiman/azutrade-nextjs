@@ -38,7 +38,9 @@ const Product = ({ products }) => {
       </section>
 
       <div className="flex bg-orange-500 w-fit p-5 rounded-3xl text-white text-2xl font-semibold gap-5 items-center  mx-auto hover:cursor-pointer border-solid border-5 border-orange-500 hover:text-orange-600 hover:bg-white">
-        <span className="text">Have Question? You Ask we Answer</span>
+        <Link href={"/faq"}>
+          <span className="text">Have Question? You Ask we Answer</span>
+        </Link>
         <span className="icon">
           <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
         </span>
