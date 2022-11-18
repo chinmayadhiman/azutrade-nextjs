@@ -1,16 +1,20 @@
 import React from 'react'
-import Header from "../components/Header";
 import Link from "next/link";
-
-import { createClient } from "next-sanity";
-const nav = ({ cs}) => {
-    // console.log(post);
+import { getFaq } from "./backend/Data";
+import faqbanner from "../public/images/faqbanner.png";
+import Image from  'next/Image'
+const faq = ({ faqData}) => {
+    
     return (
       <>
-        <Header />
-        <div className="flex flex-col">
-          {cs.length > 0 &&
-            cs.map(
+        <div className="flex my-28 w-full">
+          <Image src={faqbanner} className="w-full" alt='Frequently Asked Questions'>
+            
+</Image>
+        </div>
+        <div className="flex flex-col my-20">
+          {faqData.length > 0 &&
+            faqData.map(
               ({ _id, title = "", slug = "", post }) =>
                 slug && (
                   <div key={_id} className="main-container">
@@ -27,15 +31,15 @@ const nav = ({ cs}) => {
                     </div>
 
                     {/*------------- post of category wise-------------- */}
-                    <div className="post bg-orange-200 p-5 text-3xl list-decimal px-8">
+                    <div className="post bg-orange-200 p-5 text-3xl list-decimal px-10 ml-8 pl-20">
                       {post.length > 0 &&
                         post.slice(0,5).map(({ _id, title = "", link = "" }) => (
-                          <li key={_id} className="ml-45">
+                          <li key={_id} className="ml-45 my-4">
                             <Link href={link}>{title}</Link>{" "}
                           </li>
                         ))}
                     </div>
-                    <div key={`${_id}-morebutton`} className="more text-2xl bg-cyan-500 text-white p-2 px-4 w-fit rounded-lg">
+                    <div key={`${_id}-morebutton`} className="more text-2xl bg-orange-400 text-white p-2 px-4 w-fit rounded-lg absolute right-1 ">
                       <Link
                         href="/category/[slug]"
                         as={`/category/${slug.current}`}
@@ -51,29 +55,11 @@ const nav = ({ cs}) => {
     );
 }
 export async function getServerSideProps(context) {
-  const client = createClient({
-    projectId: "kbnh7il4",
-    dataset: "production",
-    useCdn: false,
-  });
-  const query = `
-     *[_type=="category"]{
-  title,
-  slug,
-  "post": *[_type=='post' && references(^._id)]{ 
-  	title,
-  	link,
-	}
-}
-    `;
-  const cs = await client.fetch(query);
-
-  // const sp = post.slice(0, 10);
-
+ const faqData = (await getFaq()) || [];
   return {
     props: {
-      cs,
+      faqData,
     },
   };
 }
-export default nav
+export default faq

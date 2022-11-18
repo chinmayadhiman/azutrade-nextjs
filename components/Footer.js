@@ -3,7 +3,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 const Footer = () => {
   return (
     <>
-      <section className="footer">
+      <section className="footer mb-10">
         <div className="box-container">
           <div className="box">
             <h3>Azu</h3>

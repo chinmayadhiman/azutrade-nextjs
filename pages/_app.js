@@ -1,9 +1,11 @@
 import "../styles/globals.css";
 import "../styles/azu.css";
+import "../styles/navbar.css";
 import favicon from '../public/images/anar.png'
 import Head from "next/head";
 import { NextSeo } from "next-seo";
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -68,7 +70,9 @@ function MyApp({ Component, pageProps }) {
           ],
         }}
       />
+      <Navbar/>
       <Component {...pageProps} />
+      <Footer/>
     </>
   );
 }

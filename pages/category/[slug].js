@@ -1,8 +1,7 @@
 import groq from "groq";
-
+import faqbanner from "../../public/images/faqbanner.png";
+import Image from "next/Image";
 import { createClient } from "next-sanity";
-import Header from "../../components/Header";
-<Header/>;
 
 
 const client = createClient({
@@ -12,17 +11,25 @@ const client = createClient({
 });
 const Post = ({ post }) => {
 
-    // console.log(post)
+  
     try {
       return (
         <>
-          <Header />
-          <div className="absolute top-0 bg-orange-500 h-2 w-full z-50">
-
+          <div className="flex mt-28 w-full">
+            <Image
+              src={faqbanner}
+              className="w-full"
+              alt="Frequently Asked Questions"
+            ></Image>
           </div>
+          ;
           <div className="flex flex-col p-5 bg-orange-200 text-4xl ">
             {post &&
-              post.map((item) => <li key={item.title} className="p-4 list-decimal ml-8">{item.title}</li>)}
+              post.map((item) => (
+                <li key={item.title} className="p-4 list-decimal ml-8">
+                  {item.title}
+                </li>
+              ))}
           </div>
         </>
       );

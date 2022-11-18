@@ -502,7 +502,7 @@ body.active {
 }
 
 .categories .box-container .box{
-    padding:3rem 2rem;
+    padding:3rem 1rem;
     border-radius: .5rem;
     background:#fff;
     box-shadow: var(--box-shadow);

@@ -1,10 +1,13 @@
 import React from 'react'
 import bg from '../public/images/hm2.jpg'
+import Navbar from './Navbar'
+import Contact from './Contact'
 const Intro = () => {
   
   return (
     <>
-     
+      <Navbar />
+      {/* <Contact/> */}
       <section
         className="home"
         id="home"
@@ -18,6 +21,7 @@ const Intro = () => {
           </h3>
         </div>
       </section>
+
       <section className="features" id="services">
         <h1 className="heading">
           why <span>choose us</span>
