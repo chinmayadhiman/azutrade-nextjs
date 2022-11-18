@@ -56,17 +56,17 @@ const Navbar = () => {
       {/* --------------------------Mobile Navigation--------------------------------------- */}
 
       <div className="md:hidden">
-        <div className="bg-white max-h-[4.4rem] px-6 rounded-t-xl fixed bottom-0 w-full z-50">
-          <ul className="flex relative justify-evenly">
+        <div className="bg-white max-h-[6.4rem] px-1 py-5  rounded-t-xl fixed bottom-0 w-full z-50">
+          <ul className="flex relative justify-evenly w-full h-full">
             {Menus.map((menu, i) => (
               <li key={i} className="w-16">
                 <Link
                   href={menu.link}
-                  className="flex flex-col text-center pt-6"
+                  className="flex flex-col text-center"
                   onClick={() => setActive(i)}
                 >
                   <span
-                    className={`text-4xl cursor-pointer duration-500 py-2  ${
+                    className={`text-5xl cursor-pointer duration-500   ${
                       i === active && "-mt-12 text-orange-500"
                     }`}
                   >
@@ -75,7 +75,7 @@ const Navbar = () => {
                   <span
                     className={` ${
                       active === i
-                        ? "translate-y-2 duration-200 opacity-100 text-2xl font-semibold items-center text-center"
+                        ? "translate-y-2 duration-200 opacity-100 text-xl font-bold items-center text-center"
                         : "opacity-0 translate-y-32"
                     } `}
                   >
