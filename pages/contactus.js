@@ -5,8 +5,8 @@ import Enquiry from "../components/Enquiry";
 const Contactus = () => {
   return (
     <>
-      <div className="banner  my-20">
-        <Image src={contactbanner} alt="You Ask We Answer">
+      <div className="banner  md:my-20 w-full">
+        <Image src={contactbanner} alt="You Ask We Answer" className='w-full'>
         </Image>
         <Enquiry/>
 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAbout } from './backend/Data';
+import { getAbout } from '../backend/Data';
 import About from "../components/About";
 const Aboutus = ({aboutData}) => {
   return (

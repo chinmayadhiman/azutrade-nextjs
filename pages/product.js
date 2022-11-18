@@ -1,5 +1,5 @@
 import React from 'react'
-import { getProducts } from "./backend/Data";
+import { getProducts } from "../backend/Data";
 import Product from "../components/Product";
 const ProductPage = ({product}) => {
   return (

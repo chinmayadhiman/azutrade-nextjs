@@ -3,9 +3,8 @@ import Intro from "../components/Intro";
 import About from "../components/About";
 import Product from "../components/Product";
 import Enquiry from "../components/Enquiry";
-import { getAbout } from "./backend/Data";
-import { getCertificates } from "./backend/Data";
-import { getProducts } from "./backend/Data";
+import { getAbout, getCertificates, getProducts } from "../backend/Data";
+
 
 
 export default function Home({product,about,certificates}) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import { getFaq } from "./backend/Data";
+import { getFaq } from "../backend/Data";
 import faqbanner from "../public/images/faqbanner.png";
 import Image from  'next/image'
 const faq = ({ faqData}) => {

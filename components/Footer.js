@@ -26,11 +26,11 @@ const Footer = () => {
                 className="fa-brands fa-youtube"
               ></a>
             </div>
-            <a href="#home">
+            {/* <a href="#home">
               <div className="lower" id="lower">
                 <AiOutlineArrowUp />
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
 
