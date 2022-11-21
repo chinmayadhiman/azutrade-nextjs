@@ -15,7 +15,7 @@ const Post = ({ post }) => {
     try {
       return (
         <>
-          <div className="flex mt-28 w-full">
+          <div className="flex md:mt-28 w-full">
             <Image
               src={faqbanner}
               className="w-full"

@@ -8,7 +8,7 @@ const Intro = () => {
     <>
       {/* <Contact/> */}
       <section
-        className="home mt-20"
+        className="home md:mt-20"
         id="home"
         style={{
           backgroundImage: `url(${bg.src})`,

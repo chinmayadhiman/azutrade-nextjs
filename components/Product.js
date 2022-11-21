@@ -39,7 +39,7 @@ const Product = ({ products }) => {
 
       <div className="flex bg-orange-500 w-fit shadow-2xl rounded-xl mx-auto items-center text-white hover:text-orange-500 hover:bg-white">
         <Link href={"/faq"}>
-          <span className=" p-5 text-4xl  font-semibold ">Have Question? You Ask we Answer</span>
+          <span className=" p-5 text-2xl md:text-4xl  font-semibold ">Have Question? You Ask we Answer</span>
         </Link>
         <span className="icon bg-white text-orange-500 p-5 px-8 text-8xl rounded-r-xl hover:text-white hover:bg-orange-500">
            <Link href={"/faq"}>
