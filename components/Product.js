@@ -37,12 +37,14 @@ const Product = ({ products }) => {
         </div>
       </section>
 
-      <div className="flex bg-orange-500 w-fit p-5 rounded-3xl text-white text-2xl font-semibold gap-5 items-center  mx-auto hover:cursor-pointer border-solid border-5 border-orange-500 hover:text-orange-600 hover:bg-white">
+      <div className="flex bg-orange-500 w-fit shadow-2xl rounded-xl mx-auto items-center text-white hover:text-orange-500 hover:bg-white">
         <Link href={"/faq"}>
-          <span className="text">Have Question? You Ask we Answer</span>
+          <span className=" p-5 text-4xl  font-semibold ">Have Question? You Ask we Answer</span>
         </Link>
-        <span className="icon">
+        <span className="icon bg-white text-orange-500 p-5 px-8 text-8xl rounded-r-xl hover:text-white hover:bg-orange-500">
+           <Link href={"/faq"}>
           <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+          </Link>
         </span>
       </div>
     </>
